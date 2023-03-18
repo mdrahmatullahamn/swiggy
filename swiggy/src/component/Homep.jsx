@@ -1,6 +1,6 @@
 import "./component.css";
-
-
+import Signup from "./Signup";
+import Login from "./Login";
 
 function Homep() {
     return (
@@ -13,7 +13,7 @@ function Homep() {
                     <h2><a href="">Login</a></h2>
                 </div>
                 <div id="home3">
-                    <h3><a href="">Signup</a></h3>
+                    <h3><a href="./Signup.jsx">Signup</a></h3>
                 </div>
                 <div id="move">
                     <h1>Movie marathon?</h1>
@@ -50,27 +50,33 @@ function Homep() {
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_248,h_376/4x_-_Super_fast_delivery_awv7sn" alt="" />
                 </div>
                 <div id="no">
-                <h2>No Minimum Order</h2>
-                <h4>Order in for yourself or for the group,</h4>
-                <h5>with no restrictions on order value</h5>
+                    <h2>No Minimum Order</h2>
+                    <h4>Order in for yourself or for the group,</h4>
+                    <h5>with no restrictions on order value</h5>
                 </div>
                 <div id="no1">
-                   <h2>Live Order Tracking</h2>
-                   <h4>Know where your order is at all times,</h4>
-                   <h5>from the restaurant to your doorstep</h5>
+                    <h2>Live Order Tracking</h2>
+                    <h4>Know where your order is at all times,</h4>
+                    <h5>from the restaurant to your doorstep</h5>
                 </div>
                 <div id="no2">
                     <h2>Lightning-Fast Delivery</h2>
                     <h4>Experience Swiggy's superfast delivery</h4>
                     <h5>for food delivered fresh & on time</h5>
                 </div>
-                
 
-                
+
+
             </div>
-            
+            <div>
+                <Signup />
+            </div>
+            <div>
+                <Login />
+            </div>
 
         </div>
+
 
 
     )

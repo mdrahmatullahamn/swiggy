@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./component.css";
+// import {useNavigate} from 'react-router-dom'
 
 
 
 
 function Signup(props) {
 const[userData, setUserData] = useState({name:'', email:'', password: ''});
+// const router = useNavigate()
 
     function submit(e){
         e.preventDefault();

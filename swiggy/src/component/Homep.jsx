@@ -1,6 +1,10 @@
 import "./component.css";
 import Signup from "./Signup";
 import Login from "./Login";
+import Homeswig from "./Homeswig";
+import Addproducts from "./Addproducts";
+import Navbar from "./Navbar";
+
 
 function Homep() {
     return (
@@ -68,11 +72,20 @@ function Homep() {
 
 
             </div>
+           <div>
+            <Signup/>
+           </div>
+            {/* <div>
+                <Login />
+            </div> */} 
             <div>
-                <Signup />
+                <Homeswig />
             </div>
             <div>
-                <Login />
+                <Addproducts/>
+            </div>
+            <div>
+                <Navbar/>
             </div>
 
         </div>

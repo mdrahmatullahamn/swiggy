@@ -1,7 +1,10 @@
 import { useState } from "react";
-
+import { Router } from "react-router-dom";
 import "./component.css";
+
+
 function Login(){
+
     const[dataVL, setFormData] =useState({email:'', password:'' });
     function submit(e){
         e.preventDefault();
@@ -12,8 +15,12 @@ function Login(){
                 flag =true;
             }
         }
-        if(flag===true){
+        if(flag){
+            localStorage.setItem("current-user",JSON.stringify(dataVL.email)) ;
             setFormData({email:'',password:''});
+            Router("/");
+            // var user = {};
+            // user["current-user"] = dataVL;  
             alert("Log in sucessful");
         }
         else{

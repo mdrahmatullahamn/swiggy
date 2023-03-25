@@ -4,6 +4,8 @@ import Login from "./Login";
 import Homeswig from "./Homeswig";
 import Addproducts from "./Addproducts";
 import Navbar from "./Navbar";
+import Logout from "./Logout";
+import AddToCart from "./AddToCart";
 
 
 function Homep() {
@@ -75,9 +77,9 @@ function Homep() {
            <div>
             <Signup/>
            </div>
-            {/* <div>
+            <div>
                 <Login />
-            </div> */} 
+            </div> 
             <div>
                 <Homeswig />
             </div>
@@ -86,6 +88,12 @@ function Homep() {
             </div>
             <div>
                 <Navbar/>
+            </div>
+            <div>
+                <Logout/>
+            </div>
+            <div>
+                <AddToCart/>
             </div>
 
         </div>

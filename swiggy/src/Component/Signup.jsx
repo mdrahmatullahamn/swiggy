@@ -37,6 +37,41 @@ const[userData, setUserData] = useState({name:'', email:'', password: ''});
         
     }
 
+
+    // function submit(e){
+    //      e.preventDefault();
+
+    //      var userFromLS= JSON.parse(localStorage.getItem("userInfo")) || [];
+
+    //      var flag= false;
+    //      for (var i=0; i<userFromLS.length;i++){
+    //         if(userFromLS[i].email===userData.email){
+    //             flag=  true;
+    //         }
+    //      }
+    //      if(flag){
+    //         setUserData({...userData,['email']:''});
+    //         alert("email alredy exitsed");
+    //      }
+    //      else if(userData.password.length<8){
+    //         setUserData({...userData,['password']:''});
+    //         alert("most be fill all fields")
+    //      }
+    //      else{
+    //         userFromLS.push(userData);
+    //         localStorage.setItem("userInfo",JSON.stringify(userFromLS));
+    //         setUserData({name:'',passsword:'',email:''});
+    //         alert("registration done")
+    //      }
+
+
+
+
+
+
+
+    
+
     function dataFetch(e){
         var value =e.target.value;
         var name = e.target.name;
@@ -73,4 +108,4 @@ const[userData, setUserData] = useState({name:'', email:'', password: ''});
         </div>
     )
 }
-export default Signup;
+export default Signup; 

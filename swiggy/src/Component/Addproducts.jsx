@@ -8,7 +8,7 @@ const Addproducts = () => {
             dataFromLs.push(products)
             localStorage.setItem("swPro", JSON.stringify(dataFromLs))
             setproducts({ pName: '', pImage: '', pPrice: '' })
-            alert("product add")
+            alert("product added")
         } else {
             alert("add plese all fealds")
         }
@@ -27,11 +27,11 @@ const Addproducts = () => {
                 <h2>Snapdeal</h2>
                 <form onSubmit={(e) => handelSubmit(e)}>
                     <label>Add product</label> <br />
-                    <input type="text" value={products.pName} placeholder="Enter Your products name" name="pName" onChange={handleInputs} /> <br />
+                    <input type="text" value={products.pName} name="pName" onChange={handleInputs} /> <br />
                     <label >Add product img Url</label> <br />
-                    <input type="text" value={products.pImage} placeholder="Enter Your products image" name="pImage" onChange={handleInputs} /> <br />
+                    <input type="text" value={products.pImage}  name="pImage" onChange={handleInputs} /> <br />
                     <label>Add products price</label> <br />
-                    <input type="number" value={products.pPrice} placeholder="Enter Your products Price" name="pPrice" onChange={handleInputs} /> <br />
+                    <input type="number" value={products.pPrice}  name="pPrice" onChange={handleInputs} /> <br />
                     {/* <input type="submit" value="add products" /> */}
                     <button>add products</button>  
                 </form>

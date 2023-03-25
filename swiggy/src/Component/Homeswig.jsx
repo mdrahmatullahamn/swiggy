@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Router } from "react-router-dom";
 import './component.css'
 const Homeswig = () => {
     const [products, setproducts] = useState();
@@ -9,7 +10,31 @@ const Homeswig = () => {
         fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
             .then(res => res.json())
             .then(json => setproducts(json.drinks))
+            // localStorage.setItem("userPro",JSON.stringify(products));
     }, []);
+    function addToCart(e){
+        // console.log(e)
+
+        var dataFromLs = JSON.parse(localStorage.getItem("userInfo"));
+        var currentUser = JSON.parse(localStorage.getItem("current-user"));
+  
+        if(currentUser){
+          for(var i=0; i<dataFromLs.length; i++){
+            if(dataFromLs[i].email === currentUser){
+              var newObj = dataFromLs[i];
+              newObj["cartData"] =newObj["cartData"] || [];
+              newObj.cartData.push(e);
+              dataFromLs[i] =newObj;
+            }
+          }
+          localStorage.setItem("userInfo",JSON.stringify(dataFromLs));
+          alert("Product added to cart");
+        }
+        else{
+          Router('/login');
+          alert("login to add products");
+        }
+      }
     return (
         <div className="fullpage">
 
@@ -101,6 +126,7 @@ const Homeswig = () => {
                         <h1>{e.strAlcoholic}</h1>
                         <h1>{e.strCategory}</h1>
                         <p>₹1299</p>
+                        <div><button className="buttoncart" onClick={ () => addToCart(e)}>Add to Cart</button></div>
                     </div>
                 ))};
             </div>
